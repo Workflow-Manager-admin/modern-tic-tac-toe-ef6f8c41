@@ -102,3 +102,105 @@
     font-size: 12px;
   }
 }
+
+/* ========== TIC TAC TOE GAME ========== */
+
+.ttt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 32px auto;
+  padding: 24px 12px 24px 12px;
+  max-width: 320px;
+  border-radius: 20px;
+  background: var(--bg-secondary);
+  box-shadow: 0 4px 24px rgba(80, 110, 150, 0.08);
+}
+
+.ttt-board {
+  display: flex;
+  flex-direction: column;
+  margin: 12px 0 18px 0;
+}
+
+.ttt-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.ttt-square {
+  background: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 2.2rem;
+  font-family: inherit;
+  font-weight: 600;
+  width: 64px;
+  height: 64px;
+  margin: 2px;
+  border-radius: 10px;
+  outline: none;
+  transition: background 0.15s, color 0.15s, border-color 0.2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  user-select: none;
+}
+
+.ttt-square:focus, .ttt-square:hover {
+  border-color: var(--text-secondary);
+}
+
+.ttt-highlight {
+  background: #e7fcee !important;
+  border-color: #388e3c !important;
+  color: #1976d2 !important;
+  /* Accent highlight for winning line */
+}
+
+.ttt-status {
+  font-size: 1.10rem;
+  font-weight: 500;
+  min-height: 24px;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  letter-spacing: 0.03em;
+}
+
+.ttt-reset {
+  margin-top: 16px;
+  padding: 10px 32px;
+  background: #1976d2;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(88, 121, 210, 0.05);
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.ttt-reset:hover, .ttt-reset:focus {
+  background: #388e3c;
+  color: #fff;
+}
+
+/* Responsive for board on small screens */
+@media (max-width: 400px) {
+  .ttt-square {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  .ttt-container {
+    max-width: 90vw;
+    padding: 10px 2vw;
+  }
+}
+/* End Tic Tac Toe Styles */
