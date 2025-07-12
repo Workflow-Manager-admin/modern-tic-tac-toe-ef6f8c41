@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header" style={{ paddingTop: '40px', paddingBottom: '18px', background: "none" }}>
+      <header className="App-header" style={{ paddingTop: '24px', paddingBottom: '0px', background: "none" }}>
         <button
           className="theme-toggle"
           onClick={toggleTheme}
@@ -32,6 +32,7 @@ function App() {
           fontSize: '2rem',
           fontWeight: 700,
           margin: 0,
+          marginBottom: '8px',
           letterSpacing: '0.03em',
           color: '#1976d2',
         }}>
@@ -41,12 +42,12 @@ function App() {
           fontSize: '1.1rem',
           color: 'var(--text-primary)',
           opacity: 0.88,
-          marginBottom: 10,
+          marginBottom: 2,
         }}>
           A modern, minimal tic-tac-toe game for two players
         </div>
       </header>
-      <main>
+      <main style={{marginTop: '-10px'}}>
         <TicTacToe />
       </main>
     </div>
